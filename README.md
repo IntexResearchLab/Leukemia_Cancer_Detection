@@ -70,9 +70,11 @@ pip install -r requirements.txt
 If you use this repository or dataset in your research, please cite:
 
 (Citation details will be updated upon DOI assignment)
+
 📨 Contact
 
 For questions or collaborations, please reach out:
 
 InteX Research Lab
+
 📧 intexresearchlab@gmail.com
