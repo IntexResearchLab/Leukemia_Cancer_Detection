@@ -1,34 +1,34 @@
 # Leukemia_Cancer_Detection
 
 Automated detection of Acute Lymphoblastic Leukemia (ALL) using CNN-based ensemble models trained on segmented and non-segmented microscopic blood smear images.
+
 📁 Repository Structure
 
+```plaintext
 Leukemia-Cancer-Detection/
-├── data/                        # Dataset folders (segmented & non-segmented) — download link provided
-├── models_on_segmented_data/    # CNN models trained on segmented data
-├── models_on_non_segmented_data/# CNN models trained on non-segmented data
-├── web/                        # Flask web app files for prediction interface
-├── README.md                   # This file
-├── requirements.txt            # Python dependencies
-└── LICENSE
+├── data/                        
+│   ├── segmented/
+│   │   ├── train/
+│   │   ├── val/
+│   │   └── test/
+│   └── non_segmented/
+│       ├── train/
+│       ├── val/
+│       └── test/
+├── models_on_segmented_data/     # CNN models trained on segmented data
+├── models_on_non_segmented_data/ # CNN models trained on non-segmented data
+├── web/                          # Flask web app files for prediction interface
+├── README.md                     # Project documentation
+├── requirements.txt              # Python dependencies
+└── LICENSE                       # License information
+```
+
 
 📊 Dataset
 
 The dataset contains microscopic images from the ALL-IDB2 database with two main categories: segmented (cropped leukemic cells) and non-segmented (raw images). The data is split into train, validation, and test sets for robust evaluation.
 
 Due to the large size of the dataset, it is not included in this repository. You can download the prepared dataset here:
-
-After downloading, organize the data as follows:
-
-data/
-├── segmented/
-│   ├── train/
-│   ├── val/
-│   └── test/
-└── non_segmented/
-    ├── train/
-    ├── val/
-    └── test/
 
 🧠 Deep Learning Models
 
