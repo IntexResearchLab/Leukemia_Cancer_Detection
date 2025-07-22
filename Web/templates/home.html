@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Leukemia Detector</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="navbar">
+                <div class="logo">
+                    <img src="{{ url_for('static', filename='logo.jpeg') }}" alt="Leukemia Logo">
+                </div>
+                <h1 style="margin-right: 20px;">SmartHeme – A smart hematology assistant for pathologists</h1>
+                <div class="title-container">
+                    <p class="title">About Leukemia</p>
+                </div>
+                <div class="navbar-links">
+                    <a href="/classification">Classification</a>
+                    <a href="/about">About</a>
+
+                    <!-- Add more links as needed -->
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="h_container">
+            <div class="text">
+                <h1>Leukemia</h1>
+                <p style="text-align: justify;">Leukemia is a type of cancer that affects the blood and bone marrow, characterized by the abnormal production of white blood cells. It disrupts the body's ability to fight infections and impairs the production of red blood cells and platelets. The disease can be classified into different types, such as Acute Lymphoblastic Leukemia (ALL), Acute Myeloid Leukemia (AML), Chronic Lymphocytic Leukemia (CLL), and Chronic Myeloid Leukemia (CML), based on the speed of progression and the type of white blood cells affected. Early diagnosis and advanced medical technologies, including computer vision and machine learning, play a crucial role in improving leukemia detection and treatment outcomes.</p>
+            </div>
+            <div class="image_home">
+                <img src="{{ url_for('static', filename='leu.png') }}" alt="Leukemia Image">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Leukemia Detector. All rights reserved.</p>
+    </footer>
+</body>
+</html>

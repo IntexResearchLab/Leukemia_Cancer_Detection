@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>About Leukemia Detector</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="navbar">
+                <div class="logo">
+                    <img src="{{ url_for('static', filename='logo.jpeg') }}" alt="Leukemia Logo">
+                </div>
+                <h1 style="margin-right: 200px;">SmartHeme – A Smart Hematology Assistant for Pathologists</h1>
+                <div class="navbar-links">
+                    <a href="/classification">Classification</a>
+                    <a href="/">Home</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-container">
+            <!-- <h1>About the Research</h1> -->
+            <div class="two-column-layout">
+                <!-- Developer Section (Left) -->
+                <!-- <div class="developer-section">
+                    <h2>Our Team</h2>
+                    <div class="developer-container">
+                        <div class="developer">
+                            <img src="{{ url_for('static', filename='Nabajyoti_Sharma.jpeg') }}" alt="Developer 1" style="width: 120px; height: auto; border-radius: 10px; display: block; margin: 0 auto;">
+                            <div class="developer-info">
+                                <h3>Nabajyoti Sharma</h3>
+                                <p>Bachelor of Science (B.Sc.) in Computer Science and Engineering</p>
+                                <p>Leading University, Sylhet, Bangladesh</p>
+                            </div>
+                        </div>
+                        <div class="developer">
+                            <img src="{{ url_for('static', filename='toma.jpg') }}" alt="Developer 2" style="width: 120px; height: auto; border-radius: 10px; display: block; margin: 0 auto;">
+                            <div class="developer-info">
+                                <h3>Anupoma Angasree Toma</h3>
+                                <p>Bachelor of Science (B.Sc.) in Computer Science and Engineering</p>
+                                <p>Leading University, Sylhet, Bangladesh</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="developer-section" style="text-align: center;">
+                    <img src="{{ url_for('static', filename='web_image.png') }}" alt="Team Image" style="width: 100%; height: auto; display: block; margin-top: 20px;">
+                </div>
+                
+
+                <!-- Research Purpose Section (Right) -->
+                <div class="research-purpose-section">
+                    <h2>Purpose of the Research</h2>
+                    <p style="text-align: justify;">
+                        The primary purpose of our research is to develop an automated Computer-Aided Diagnosis (CAD) system for the early detection of leukemia, utilizing computer vision and ensemble deep learning techniques. Early and accurate diagnosis is crucial for effective treatment and better patient outcomes. Traditional manual diagnosis methods, relying on microscopic blood smear examination, are time-consuming, subjective, and prone to error. Our research addresses these challenges by integrating advanced image segmentation and deep learning models to automatically detect and classify leukemia cells. This system enhances diagnostic accuracy, reduces processing time, and provides a reliable tool to assist medical professionals in the timely and precise detection of leukemia. This innovative approach not only improves diagnostic efficiency but also supports healthcare providers in delivering more effective and timely treatment for leukemia patients.
+                    </p>                    
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

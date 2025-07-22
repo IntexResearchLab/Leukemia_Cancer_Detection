@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="{{ url_for('static', filename='menu-toggle.js') }}" defer></script>
+    <title>Cell Classification</title>
+</head>
+<body>
+
+    <div style="display: flex; align-items: center; justify-content: space-between;" class="new">
+
+        <a href="/" style="text-decoration: none;">
+            <img src="{{ url_for('static', filename='logo.jpeg') }}" alt="Logo" style="height: 50px; margin-right: 15px;">
+        </a>
+
+        <h1 style="margin-right: 20px;">Upload Microscopic Image</h1>
+        <form action="/classification" method="post" enctype="multipart/form-data" style="display: flex; align-items: center;">
+            <input type="file" name="file" accept=".png,.jpg,.jpeg,.tif" class="button-35" required style="margin-right: 10px; margin-top: 30px; margin-left: 50px;">
+            <button type="submit" class="upload-button">Upload & Process</button>
+        </form>
+        
+        <!-- Hamburger Icon and Menu -->
+        <div class="hamburger-menu" style="margin-left: auto;">
+            <button class="hamburger-icon" onclick="toggleMenu()">&#9776;</button>
+            <div id="menu" class="menu" style="display: none;">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/classification">Classification</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Original Image -->
+        <div class="image-box">
+            <h2>Original Image</h2>
+            {% if original_image %}
+                <img src="{{ url_for('uploaded_file', filename=original_image) }}" alt="Original Image">
+            {% else %}
+                <div class="placeholder">No Image Uploaded</div>
+            {% endif %}
+        </div>
+
+        <!-- Classified Image with Download Button -->
+        <div class="image-box">
+            <div style="display: flex; align-items: center; justify-content: center; width: fit-content; margin: 0 auto; margin-left: 35%;">
+                <h2>Classified Image</h2>
+                {% if classified_image %}
+                    <a href="{{ url_for('uploaded_file', filename=classified_image) }}" download class="download-button">
+                        <i class="fa fa-download" style="font-size: 24px;"></i>
+                    </a>
+                {% endif %}
+            </div>            
+            {% if classified_image %}
+                <img src="{{ url_for('uploaded_file', filename=classified_image) }}" alt="Classified Image">
+            {% else %}
+                <div class="placeholder">Processing Result Will Appear Here</div>
+            {% endif %}
+        </div>
+    </div>
+
+</body>
+</html>
